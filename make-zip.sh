@@ -1,4 +1,4 @@
-for i in catalogue; do
+for i in catalogue user; do
   git clone https://github.com/roboshop-devops-project-v3/$i.git
   rm -rf $i/.git
   cd $i
@@ -8,3 +8,5 @@ for i in catalogue; do
   aws s3 cp $i.zip s3://roboshop-artifacts/$i-v3.zip
   rm -rf $i $i.zip
 done
+
+rm -f *.zip
