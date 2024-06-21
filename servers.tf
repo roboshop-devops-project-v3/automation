@@ -58,6 +58,8 @@ variable "instances" {
     frontend = {}
     mongo = {}
     redis = {}
+    mysql = {}
+    rabbitmq = {}
 
   }
 }
