@@ -32,27 +32,31 @@ resource "null_resource" "apply" {
     connection {
       user = "ec2-user"
       password = "DevOps321"
-      host = aws_instance.instance[each.key].private_ip
+      host = aws_instance.instance[each.key].public_ip
     }
 
     inline = [
       "rm -rf automation",
       "git clone https://github.com/roboshop-devops-project-v3/automation.git",
       "cd automation",
-      "sudo bash frontend.sh"
+      "sudo bash ${each.key}.sh"
     ]
 
   }
 }
 
+
+
+provider "aws" {
+  region = "us-east-1"
+}
+
+
 variable "instances" {
   default = {
 
     frontend = {}
+    mongo = {}
 
   }
-}
-
-provider "aws" {
-  region = "us-east-1"
 }
