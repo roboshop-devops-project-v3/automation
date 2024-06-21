@@ -57,6 +57,7 @@ variable "instances" {
 
     frontend = {}
     mongo = {}
+    redis = {}
 
   }
 }
