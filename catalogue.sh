@@ -19,5 +19,5 @@ systemctl enable catalogue
 systemctl restart catalogue
 
 dnf install mongodb-mongosh -y
-mongosh <db/master-data.js
+mongosh -h mongo-test.rdevopsb79.online <db/master-data.js
 
