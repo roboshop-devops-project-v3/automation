@@ -60,6 +60,7 @@ variable "instances" {
     redis = {}
     mysql = {}
     rabbitmq = {}
+    catalogue = {}
 
   }
 }
