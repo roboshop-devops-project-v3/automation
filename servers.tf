@@ -61,6 +61,8 @@ variable "instances" {
     mysql = {}
     rabbitmq = {}
     catalogue = {}
+    user = {}
+    cart = {}
 
   }
 }
