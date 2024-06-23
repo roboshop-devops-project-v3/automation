@@ -9,7 +9,7 @@ curl -o /tmp/shipping.zip https://roboshop-artifacts.s3.amazonaws.com/shipping-v
 cd /app
 unzip /tmp/shipping.zip
 
-mnv clean package
+mvn clean package
 mv target/shipping*.jar shipping.jar
 mysql -h mysql-test.rdevopsb79.online -uroot -pRoboShop@1 <db/shipping.sql
 
