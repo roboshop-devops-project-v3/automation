@@ -9,7 +9,7 @@ curl -o /tmp/payment.zip https://roboshop-artifacts.s3.amazonaws.com/payment-v3.
 cd /app
 unzip /tmp/payment.zip
 
-pip3 -r requirements.txt
+pip3 install -r requirements.txt
 
 systemctl daemon-reload
 systemctl enable payment
