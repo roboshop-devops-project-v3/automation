@@ -1,4 +1,4 @@
-dnf install maven -y
+dnf install maven mysql -y
 
 rm -rf /app
 mkdir /app
