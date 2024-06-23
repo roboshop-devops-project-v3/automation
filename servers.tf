@@ -64,6 +64,7 @@ variable "instances" {
     user = {}
     cart = {}
     shipping = {}
+    payment = {}
 
   }
 }

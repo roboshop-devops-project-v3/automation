@@ -1,5 +1,5 @@
-#for i in catalogue user cart frontend shipping; do
-for i in shipping; do
+#for i in catalogue user cart frontend shipping payment; do
+for i in payment; do
   git clone https://github.com/roboshop-devops-project-v3/$i.git
   rm -rf $i/.git
   cd $i
