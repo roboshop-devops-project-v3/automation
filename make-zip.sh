@@ -1,4 +1,4 @@
-for i in catalogue user; do
+for i in catalogue user cart frontend; do
   git clone https://github.com/roboshop-devops-project-v3/$i.git
   rm -rf $i/.git
   cd $i

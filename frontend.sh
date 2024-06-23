@@ -3,8 +3,12 @@ dnf module enable nginx:1.24 -y
 
 dnf install nginx -y
 rm -rf /usr/share/nginx/html/*
-cp -r web/static/*  /usr/share/nginx/html/
-cp web/nginx.conf /etc/nginx/nginx.conf
+
+curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend-v3.zip
+cd /usr/share/nginx/html
+unzip /tmp/frontend-v3.zip
+
+
 systemctl enable nginx
 systemctl restart nginx
 
