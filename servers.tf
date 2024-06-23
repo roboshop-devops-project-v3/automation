@@ -63,6 +63,7 @@ variable "instances" {
     catalogue = {}
     user = {}
     cart = {}
+    shipping = {}
 
   }
 }

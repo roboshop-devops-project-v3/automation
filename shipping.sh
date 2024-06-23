@@ -7,10 +7,11 @@ cp shipping.service /etc/systemd/system/shipping.service
 
 curl -o /tmp/shipping.zip https://roboshop-artifacts.s3.amazonaws.com/shipping-v3.zip
 cd /app
-unzip /tmp/cart.zip
+unzip /tmp/shipping.zip
 
 mnv clean package
 mv target/shipping*.jar shipping.jar
+mysql -h mysql-test.rdevopsb79.online -uroot -pRoboShop@1 <db/shipping.sql
 
 systemctl daemon-reload
 systemctl enable shipping
