@@ -13,6 +13,7 @@ mvn clean package
 mv target/shipping*.jar shipping.jar
 mysql -h mysql-test.rdevopsb79.online -uroot -pRoboShop@1 <db/shipping.sql
 mysql -h mysql-test.rdevopsb79.online -uroot -pRoboShop@1 <db/app-user.sql
+mysql -h mysql-test.rdevopsb79.online -uroot -pRoboShop@1 <db/schema.sql
 
 systemctl daemon-reload
 systemctl enable shipping
